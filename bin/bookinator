@@ -3,7 +3,7 @@ var fs = require('fs');
 var path = require('path');
 var out = require('out');
 
-var bookinator = require('./');
+var bookinator = require('../');
 var known = {
   output: path,
   template: path
