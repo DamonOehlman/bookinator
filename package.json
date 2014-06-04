@@ -1,6 +1,6 @@
 {
   "name": "bookinator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Automate Inkscape to create PDF files you can use to make a book-like thing",
   "main": "index.js",
   "scripts": {
