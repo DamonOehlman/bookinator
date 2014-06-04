@@ -7,6 +7,25 @@ var extend = require('extend');
 var mkdirp = require('mkdirp');
 var handlebars = require('handlebars');
 
+/**
+  # bookinator
+
+  A simple bit of code that does the following:
+
+  - reads an input CSV (using the `binary-csv` module)
+  - generates an SVG file using that input data and an SVG template
+    file (using handlebars for template rendering)
+  - automates inkscape to generate a pdf for each SVG "page"
+
+  ## Usage
+
+  Designed for command line use, an example command:
+
+  ```
+  bookinator -t templatefile.svg < inputcsv.csv
+  ```
+**/
+
 module.exports = function(opts, callback) {
   var templateFile = path.resolve((opts || {}).template || '');
   var output = path.resolve((opts || {}).output || 'output');
