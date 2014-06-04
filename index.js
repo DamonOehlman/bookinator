@@ -6,6 +6,7 @@ var fs = require('fs');
 var extend = require('extend');
 var mkdirp = require('mkdirp');
 var handlebars = require('handlebars');
+var exec = require('child_process').exec;
 
 /**
   # bookinator
@@ -33,14 +34,12 @@ module.exports = function(opts, callback) {
   var template;
 
   function generatePage(data, callback) {
-    var filename = path.join(output, 'page-' + data.Page + '.svg');
+    var filename = path.join(output, 'page-' + data.Page);
 
     async.series([
       mkdirp.bind(mkdirp, output),
-      fs.writeFile.bind(fs, filename, template(data), 'utf8'),
-      function(itemCallback) {
-        itemCallback();
-      }
+      fs.writeFile.bind(fs, filename + '.svg', template(data), 'utf8'),
+      exec.bind(null, 'inkscape -f ' + filename + '.svg -A ' + filename + '.pdf')
     ], callback);
   }
 
