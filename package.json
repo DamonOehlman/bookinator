@@ -1,0 +1,38 @@
+{
+  "name": "bookinator",
+  "version": "0.0.0",
+  "description": "Automate Inkscape to create PDF files you can use to make a book-like thing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "bookinator": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamonOehlman/bookinator.git"
+  },
+  "keywords": [
+    "pdf",
+    "automation",
+    "inkscape"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/bookinator/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/bookinator",
+  "dependencies": {
+    "async": "^0.9.0",
+    "binary-csv": "^0.2.0",
+    "concat-stream": "^1.4.6",
+    "extend": "^1.2.1",
+    "handlebars": "^2.0.0-alpha.4",
+    "inkscape": "0.0.5",
+    "mkdirp": "^0.5.0",
+    "nopt": "^2.2.1",
+    "out": "^0.5.4"
+  }
+}
