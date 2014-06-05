@@ -20,6 +20,15 @@ Designed for command line use, an example command:
 bookinator -t templatefile.svg < inputcsv.csv
 ```
 
+This will generate a number of paged pdf files in the `output` folder, and
+you then use a tool such as
+[pdftk](http://www.ubuntuhowtos.com/howtos/merge_pdf_files) to concatenate
+the files together in a single document:
+
+```
+pdftk output/page-*.pdf cat output merged.pdf
+```
+
 ## License(s)
 
 ### ISC
