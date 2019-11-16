@@ -32,7 +32,7 @@
     "concat-stream": "^1.4.6",
     "extend": "^1.2.1",
     "formatter": "^0.4.1",
-    "handlebars": "^2.0.0-alpha.4",
+    "handlebars": "^4.5.2",
     "mkdirp": "^0.5.0",
     "nopt": "^2.2.1",
     "out": "^0.5.4"
